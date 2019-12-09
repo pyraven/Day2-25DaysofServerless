@@ -12,7 +12,7 @@ According to the challenge, we have to set several tasks to be scheduled on Dece
 8:45 AM - deliver the coffee to Sister and Brother
 8:49 AM - return to kitchen, take a break!
 
-Solution to Day 2 of the #25DaysOfServerless. This solution uses Cloud Scheduler, PubSub, and a Cloud Function on GCP. For SMS, I've used the Twilio API.
+Solution to Day 2 of the #25DaysOfServerless. This solution uses Cloud Scheduler, PubSub, and a Cloud Function on GCP. For SMS, I used the Twilio API.
 
 The scheduler runs on a cronjob (shown below), which triggers a pub/sub topic, which triggers the cloud function to send a reminder SMS (using Twilio) to Lucy based on the minute of the hour.
 
